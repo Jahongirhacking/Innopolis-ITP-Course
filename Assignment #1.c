@@ -65,10 +65,10 @@ int main()
     int targetCnt; // Desired number of lines
     int cnt = 0; // Count the number of lines on file
 
-    FILE *outFile;
-    outFile = fopen("output.txt", "w");
-    fprintf(outFile, ERR);
-    fclose(outFile);
+    FILE *initFile;
+    initFile = fopen("output.txt", "w");
+    fprintf(initFile, ERR);
+    fclose(initFile);
 
 
     // ************ TESTING ************* //
@@ -122,12 +122,12 @@ int main()
 
     // ************ OUTPUT ************* //
 
-    FILE *initFile;
-    initFile = fopen("output.txt", "w");
+    FILE *outFile;
+    outFile = fopen("output.txt", "w");
     for(int i = 0; i < targetCnt; i++){
-        fprintf(initFile, "%s", strArray[i]);
+        fprintf(outFile, "%s", strArray[i]);
     }
-    fclose(initFile);
+    fclose(outFile);
 
     return 0;
 }
